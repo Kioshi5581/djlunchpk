@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+<section style="padding:7rem 0">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="position-sticky" style="top:100px">
+                    <div
+                        style="display:inline-block;max-width:100%;overflow:hidden;position:relative;box-sizing:border-box;margin:0">
+                        <div style="box-sizing:border-box;display:block;max-width:100%">
+                            <img sizes="100vw" src='{{ MEDIA_URL }}{{ Frozen.frzn_img.url }}' alt="img"
+                                style="max-width: 100%; display: block; margin: 0; border: none; padding: 0">
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="position-sticky" style="top:100px">
+                    <h1 class="font-weight-bold">{{ Frozen }}</h1>
+                    <h4 class="mb-3">
+                        PKR {{ Frozen.price }}
+                    </h4>
+                    <h5 class="mb-3">
+                        {{ Frozen.pieces }} pieces
+
+                    </h5>
+                    <p class="font-weight-bold mb-2">Its not just TASTY. Its HEALTHY too!</p>
+                    <p class="mb-1" style="font-size:1rem">Ready to dispatch in 1 day</p>
+                    <a class="cta-btn cta-btn-primary" href="/place-an-order/">Order Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% include "base2.html" %}
+
+{% endblock content %}
+
+
+

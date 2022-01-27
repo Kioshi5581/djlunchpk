@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+<main>
+    <div class="row" style="min-height: 100vh;">
+        <div class="p-5 mt-4 col-xl-3 col-lg-5">
+            <h3 class="font-weight-bold mb-4">Apply for foodlancer</h3>
+            <div class="alert alert-success" role="alert">
+                Your kitchen has been registered
+              </div>
+            <form action="#" method="post">
+
+                {% csrf_token %}
+                <div class="step-1 null">
+                    <div class="mb-3">
+                        <label for="name">Your Name</label>
+                        <input class="form-control shadow-none" name="name" type="text" value="">
+                    </div>
+                    <div class="mb-3">
+                        <label for="kitchenName">Kitchen Name</label>
+                        <input class="form-control shadow-none" name="kitchenName" type="text" value="">
+                    </div>
+                    <div class="mb-3"><label for="phone">Phone or Whatsapp</label>
+                        <input class="form-control shadow-none" name="phone" type="text" value="">
+                    </div>
+                    <div class="mb-3"><label for="email">Email Address</label>
+                        <input class="form-control shadow-none" name="email" type="email">
+                    </div>
+                    <div class="mb-3"><label for="email">Street Address</label>
+                        <input class="form-control shadow-none" name="street" type="text">
+                    </div>
+                    <div class="mb-3"><label for="email">City</label>
+                        <input class="form-control shadow-none" name="city" type="text">
+                    </div>
+                    
+                    <button type="submit" class="cta-btn cta-btn-primary">Submit</button>
+                </div>
+            </form>
+        </div>
+        <div class="col-xl-9 col-lg-7" style="background: linear-gradient(45deg, rgb(0, 164, 189), rgb(0, 189, 165));">
+            <section class="text-white"
+                style="padding: 4.375rem 0px 3.125rem; background: linear-gradient(45deg, rgb(0, 164, 189), rgb(0, 189, 165));">
+                <div class="container">
+                    <div class="justify-content-center row"><iframe class="p-3 col-6" title="Foodlaner 1"
+                            src="https://www.youtube.com/embed/1DtpVa9sYP4" width="480" height="280" frameborder="0"
+                            allowfullscreen=""></iframe><iframe class="p-3 col-6" title="Foodlaner 2"
+                            src="https://www.youtube.com/embed/-9CPDNJpGMw" width="480" height="280" frameborder="0"
+                            allowfullscreen=""></iframe><iframe class="p-3 col-6" title="Foodlaner 3"
+                            src="https://www.youtube.com/embed/zL9C6LEyIUM" width="480" height="280" frameborder="0"
+                            allowfullscreen=""></iframe><iframe class="p-3 col-6" title="Foodlaner 4"
+                            src="https://www.youtube.com/embed/JQ_oDYD3ybk" width="480" height="280" frameborder="0"
+                            allowfullscreen=""></iframe></div>
+                </div>
+            </section>
+        </div>
+    </div>
+</main>
+
+{% include "base2.html" %}
+
+{% endblock content %}

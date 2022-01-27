@@ -1,0 +1,94 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+<main>
+    <style>
+        .errorlist {
+            color: #dc3545 !important;
+            display: block !important;
+            font-size: 12.8px;
+            list-style: none;
+            margin: 0px;
+            padding: 0px;
+            display: block !important;
+
+        }
+
+        input[type="text"] {
+            display: block;
+            width: 100%;
+            padding: 0.375rem 0.75rem;
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 1.5;
+            color: #495057;
+            background-color: #fff;
+            background-clip: padding-box;
+            border: 1px solid #ced4da;
+            border-radius: 0.25rem;
+        }
+
+        input[type="email"] {
+            display: block;
+            width: 100%;
+            padding: 0.375rem 0.75rem;
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 1.5;
+            color: #495057;
+            background-color: #fff;
+            background-clip: padding-box;
+            border: 1px solid #ced4da;
+            border-radius: 0.25rem;
+        }
+        label {
+            display: inline-block;
+            margin-bottom: 0.5rem;
+            margin-top: 0.5rem;
+        }
+
+        select#id_phone_0 {
+            display: block;
+            width: 100%;
+            padding: 0.375rem 0.75rem;
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 1.5;
+            color: #495057;
+            background-color: #fff;
+            background-clip: padding-box;
+            border: 1px solid #ced4da;
+            border-radius: 0.25rem;
+        }
+    </style>
+    <div class="row" style="min-height: 100vh;">
+        <div class="p-5 mt-4 col-xl-3 col-lg-5">
+            <h3 class="font-weight-bold mb-4">Apply for foodlancer</h3>
+            <form method="POST" novalidate>
+                {% csrf_token %}
+                {{ form }}
+                <button type="submit" class="cta-btn mt-3 cta-btn-primary">Submit</button>
+
+            </form>
+        </div>
+        <div class="col-xl-9 col-lg-7" style="background: linear-gradient(45deg, rgb(0, 164, 189), rgb(0, 189, 165));">
+            <section class="text-white"
+                style="padding: 4.375rem 0px 3.125rem; background: linear-gradient(45deg, rgb(0, 164, 189), rgb(0, 189, 165));">
+                <div class="container">
+                    <div class="justify-content-center row"><iframe class="p-3 col-6" title="Foodlaner 1"
+                            src="https://www.youtube.com/embed/1DtpVa9sYP4" width="480" height="280" frameborder="0"
+                            allowfullscreen=""></iframe><iframe class="p-3 col-6" title="Foodlaner 2"
+                            src="https://www.youtube.com/embed/-9CPDNJpGMw" width="480" height="280" frameborder="0"
+                            allowfullscreen=""></iframe><iframe class="p-3 col-6" title="Foodlaner 3"
+                            src="https://www.youtube.com/embed/zL9C6LEyIUM" width="480" height="280" frameborder="0"
+                            allowfullscreen=""></iframe><iframe class="p-3 col-6" title="Foodlaner 4"
+                            src="https://www.youtube.com/embed/JQ_oDYD3ybk" width="480" height="280" frameborder="0"
+                            allowfullscreen=""></iframe></div>
+                </div>
+            </section>
+        </div>
+    </div>
+</main>
+
+{% endblock content %}

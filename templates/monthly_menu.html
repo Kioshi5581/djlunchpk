@@ -1,0 +1,231 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+    <section style="background: rgb(245, 248, 250); padding: 3.125rem 0px;">
+        <div class="container">
+            <div class="monthly-menu text-center" style="margin-bottom: 84px;">
+                <h2 class="name mb-1">{{ Package.package_name }}</h2>
+                <p class="desc mb-2">{{ Package.package_desc }}</p>
+                <h4 class="price">PKR {{ Package.package_price }}</h4>
+                <table class="mt-4 mb-1 bg-white text-left table table-striped">
+                    <thead style="background-color: rgb(32, 196, 0); color: rgb(255, 255, 255);">
+                        <tr>
+                            <th style="width: 14%;">Day</th>
+                            <th style="width: 40%;">Week 1</th>
+                            <th>Week 2</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Mon</td>
+                            <td>{{ Package.week_1_mon }}</td>
+                            <td>{{ Package.week_2_mon }}</td>
+                        </tr>
+                        <tr>
+                            <td>Tue</td>
+                            <td>{{ Package.week_1_tue }}</td>
+                            <td>{{ Package.week_2_tue }}</td>
+                        </tr>
+                        <tr>
+                            <td>Wed</td>
+                            <td>{{ Package.week_1_wed }}</td>
+                            <td>{{ Package.week_2_wed }}</td>
+                        </tr>
+                        <tr>
+                            <td>Thu</td>
+                            <td>{{ Package.week_1_thu }}</td>
+                            <td>{{ Package.week_2_thu }}</td>
+                        </tr>
+                        <tr>
+                            <td>Fri</td>
+                            <td>{{ Package.week_1_fri }}</td>
+                            <td>{{ Package.week_2_fri }}</td>
+                        </tr>
+                        <tr>
+                            <td>Sat</td>
+                            <td>{{ Package.week_1_sat }}</td>
+                            <td>{{ Package.week_2_sat }}</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table class="mb-4 bg-white text-left table table-striped">
+                    <thead style="background-color: rgb(32, 196, 0); color: rgb(255, 255, 255);">
+                        <tr>
+                            <th style="width: 14%;">Day</th>
+                            <th style="width: 40%;">Week 3</th>
+                            <th>Week 4</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Mon</td>
+                            <td>{{ Package.week_3_mon }}</td>
+                            <td>{{ Package.week_4_mon }}</td>
+                        </tr>
+                        <tr>
+                            <td>Tue</td>
+                            <td>{{ Package.week_3_tue }}</td>
+                            <td>{{ Package.week_4_tue }}</td>
+                        </tr>
+                        <tr>
+                            <td>Wed</td>
+                            <td>{{ Package.week_3_wed }}</td>
+                            <td>{{ Package.week_4_wed }}</td>
+                        </tr>
+                        <tr>
+                            <td>Thu</td>
+                            <td>{{ Package.week_3_thu }}</td>
+                            <td>{{ Package.week_4_thu }}</td>
+                        </tr>
+                        <tr>
+                            <td>Fri</td>
+                            <td>{{ Package.week_3_fri }}</td>
+                            <td>{{ Package.week_4_fri }}</td>
+                        </tr>
+                        <tr>
+                            <td>Sat</td>
+                            <td>{{ Package.week_3_sat }}</td>
+                            <td>{{ Package.week_4_sat }}</td>
+                        </tr>
+                    </tbody>
+                </table><a class="cta-btn cta-lg cta-btn-primary"
+                    href="/place-an-order/">Order Now</a>
+            </div>
+        </div>
+    </section>
+    <section class="text-white text-center"
+        style="background: linear-gradient(45deg, rgb(0, 164, 189), rgb(0, 189, 165)); padding: 4.375rem 0px 3.125rem;">
+        <div class="container">
+            <h2 class="font-weight-bold">Your Payment and Quality is Ensured</h2>
+            <p class="my-4">We ensure quality of food and services. we hold your payment in company account until you
+                are delivered <br> complete days and satisfied with food provided. You are no longer limited to one
+                kitchen, we have number of <br> family kitchens near you to meet your needs.</p><a
+                class="cta-btn cta-lg cta-btn-primary" href="/place-an-order/">Order
+                Now</a>
+        </div>
+    </section>
+    <section class="text-center " style="padding: 4.375rem 0px 3.125rem; background: rgb(245, 248, 250);">
+        <div class="container">
+            <h2 class="font-weight-bold">Order in <span class="text-color-primary">3 Simple Steps</span></h2>
+            <div class="mt-5 row">
+                <div class="mb-5 col-lg-4">
+                    <div class="step-card bg-white mx-auto p-4 position-relative rounded"
+                        style="width: 90%; height: 100%; box-shadow: rgba(51, 71, 91, 0.12) 0px 8px 30px -5px;">
+                        <h2 class="font-weight-bold text-success" style="position: absolute; top: 8px; left: 20px;">1
+                        </h2>
+                        <div
+                            style="display: inline-block; max-width: 100%; overflow: hidden; position: relative; box-sizing: border-box; margin: 0px;">
+                            <div style="box-sizing: border-box; display: block; max-width: 100%;"><img alt=""
+                                    aria-hidden="true"
+                                    src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNzAiIGhlaWdodD0iMTA1IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIvPg=="
+                                    style="max-width: 100%; display: block; margin: 0px; border: none; padding: 0px;">
+                            </div><img alt="Click on Order Now"
+                                src="https://lunch.pk/_next//image?url=%2Fassets%2Fimg%2Forder-now-click.svg&amp;w=256&amp;q=75"
+                                decoding="async" data-nimg="intrinsic" class="mb-3"
+                                style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;"
+                                srcset="https://lunch.pk/_next//image?url=%2Fassets%2Fimg%2Forder-now-click.svg&amp;w=96&amp;q=75 1x, /_next/image?url=%2Fassets%2Fimg%2Forder-now-click.svg&amp;w=256&amp;q=75 2x"><noscript></noscript>
+                        </div>
+                        <h5 class="mb-0" style="font-weight: 600;">Click on Order Now</h5>
+                    </div>
+                </div>
+                <div class="mb-5 col-lg-4">
+                    <div class="step-card bg-white mx-auto p-4 position-relative rounded"
+                        style="width: 90%; height: 100%; box-shadow: rgba(51, 71, 91, 0.12) 0px 8px 30px -5px;">
+                        <h2 class="font-weight-bold text-success" style="position: absolute; top: 8px; left: 20px;">2
+                        </h2>
+                        <div
+                            style="display: inline-block; max-width: 100%; overflow: hidden; position: relative; box-sizing: border-box; margin: 0px;">
+                            <div style="box-sizing: border-box; display: block; max-width: 100%;"><img alt=""
+                                    aria-hidden="true"
+                                    src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNzAiIGhlaWdodD0iMTA1IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIvPg=="
+                                    style="max-width: 100%; display: block; margin: 0px; border: none; padding: 0px;">
+                            </div><img alt="Pay via Bank Transfer"
+                                src="https://lunch.pk/_next//image?url=%2Fassets%2Fimg%2Fbank-transfer-icon.svg&amp;w=256&amp;q=75"
+                                decoding="async" data-nimg="intrinsic" class="mb-3"
+                                style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;"
+                                srcset="https://lunch.pk/_next//image?url=%2Fassets%2Fimg%2Fbank-transfer-icon.svg&amp;w=96&amp;q=75 1x, /_next/image?url=%2Fassets%2Fimg%2Fbank-transfer-icon.svg&amp;w=256&amp;q=75 2x"><noscript></noscript>
+                        </div>
+                        <h5 class="mb-0" style="font-weight: 600;">Pay via Bank Transfer</h5>
+                    </div>
+                </div>
+                <div class="mb-5 col-lg-4">
+                    <div class="step-card bg-white mx-auto p-4 position-relative rounded"
+                        style="width: 90%; height: 100%; box-shadow: rgba(51, 71, 91, 0.12) 0px 8px 30px -5px;">
+                        <h2 class="font-weight-bold text-success" style="position: absolute; top: 8px; left: 20px;">3
+                        </h2>
+                        <div
+                            style="display: inline-block; max-width: 100%; overflow: hidden; position: relative; box-sizing: border-box; margin: 0px;">
+                            <div style="box-sizing: border-box; display: block; max-width: 100%;"><img alt=""
+                                    aria-hidden="true"
+                                    src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNzAiIGhlaWdodD0iMTA1IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIvPg=="
+                                    style="max-width: 100%; display: block; margin: 0px; border: none; padding: 0px;">
+                            </div><img alt="Enjoy the Food"
+                                src="https://lunch.pk/_next//image?url=%2Fassets%2Fimg%2Ffood-test.svg&amp;w=256&amp;q=75"
+                                decoding="async" data-nimg="intrinsic" class="mb-3"
+                                style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;"
+                                srcset="https://lunch.pk/_next//image?url=%2Fassets%2Fimg%2Ffood-test.svg&amp;w=96&amp;q=75 1x, /_next/image?url=%2Fassets%2Fimg%2Ffood-test.svg&amp;w=256&amp;q=75 2x"><noscript></noscript>
+                        </div>
+                        <h5 class="mb-0" style="font-weight: 600;">Enjoy the Food</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="" style="padding: 4.375rem 0px 3.125rem;">
+        <div class="container">
+            <h2 class="font-weight-bold mb-5">Frequently Asked Questions</h2>
+            <div class="faq-items">
+                <div class="faq-item mb-5">
+                    <h5>Who will deliver me food?</h5>
+                    <p style="width: 85%;">You get food by families near you. living in 5-10 KMs in your area.</p>
+                </div>
+                <div class="faq-item mb-5">
+                    <h5>What If I am not available or subscribe
+                        in middle or end of the month?</h5>
+                    <p style="width: 85%;">Our packages do not expire like Telco
+                        companies. We deliver you complete days.
+                        If you are not available on any day, let
+                        us know (1 day) in advance and we’ll
+                        record and deliver that meal to you on
+                        later days. In Economy package, Mazedar,
+                        Office, and Hostel package you ll get
+                        food for 22 days after subscription.</p>
+                </div>
+                <div class="faq-item mb-5">
+                    <h5>How to pay for food?</h5>
+                    <p style="width: 85%;">You can pay via Bank Transfer,
+                        credit/debit card in advance.</p>
+                </div>
+                <div class="faq-item mb-5">
+                    <h5>How to Order?</h5>
+                    <p style="width: 85%;">1- Click on the ORDER NOW BUTTON below
+                        your favorite menu <br>
+                        2- Fill in your DELIVERY ADDRESS and
+                        information <br>
+                        3- Wait for our CONFIRMATION CALL/EMAIL
+                        or notify us at 0333 518 9005
+                        <br></p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section style="padding: 0px 0px 5rem;">
+        <div class="container">
+            <p>You can also PAY FOR A WEEK TO TEST our service until you are fully satisfied to join monthly menu.</p>
+            <p class="mb-5">We have FIXED prices and we do not offer any discount below 100 people.</p>
+            <div class="bg-light p-4 rounded">
+                <div class="row">
+                    <div class="my-3 col-lg-9">
+                        <h3 class="font-weight-bold">Not Sure Yet? Try our food for 6 days in PKR 1750</h3>
+                        <p class="mb-0">You will get food for 1 person 1 Time Meal for 6 days.</p>
+                    </div>
+                    <div class="align-self-center my-3 col"><a class="cta-btn cta-btn-primary"
+                            href="/place-an-order/">Order Weekly Trial</a></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+{% endblock content %}

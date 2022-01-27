@@ -1,0 +1,214 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+<style>
+    .errorlist {
+        color: #dc3545 !important;
+        display: block !important;
+        font-size: 12.8px;
+        list-style: none;
+        margin: 0px;
+        padding: 0px;
+        display: block !important;
+
+    }
+
+    input[type="text"] {
+        display: block;
+        width: 100%;
+        padding: 0.375rem 0.75rem;
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.5;
+        color: #495057;
+        background-color: #fff;
+        background-clip: padding-box;
+        border: 1px solid #ced4da;
+        border-radius: 0.25rem;
+    }
+
+    input[type="email"] {
+        display: block;
+        width: 100%;
+        padding: 0.375rem 0.75rem;
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.5;
+        color: #495057;
+        background-color: #fff;
+        background-clip: padding-box;
+        border: 1px solid #ced4da;
+        border-radius: 0.25rem;
+    }
+
+    input[type="number"] {
+        display: block;
+        width: 100%;
+        padding: 0.375rem 0.75rem;
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.5;
+        color: #495057;
+        background-color: #fff;
+        background-clip: padding-box;
+        border: 1px solid #ced4da;
+        border-radius: 0.25rem;
+    }
+
+    textarea {
+        display: block;
+        width: 100%;
+        padding: 0.375rem 0.75rem;
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.5;
+        color: #495057;
+        background-color: #fff;
+        background-clip: padding-box;
+        border: 1px solid #ced4da;
+        border-radius: 0.25rem;
+    }
+
+    select#id_City {
+        display: block;
+        width: 100%;
+        padding: 0.375rem 0.75rem;
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.5;
+        color: #495057;
+        background-color: #fff;
+        background-clip: padding-box;
+        border: 1px solid #ced4da;
+        border-radius: 0.25rem;
+    }
+
+    select#id_Time {
+        display: block;
+        width: 100%;
+        padding: 0.375rem 0.75rem;
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.5;
+        color: #495057;
+        background-color: #fff;
+        background-clip: padding-box;
+        border: 1px solid #ced4da;
+        border-radius: 0.25rem;
+    }
+
+    label {
+        display: inline-block;
+        margin-bottom: 0.5rem;
+        margin-top: 0.5rem;
+    }
+
+    select#id_phone_0 {
+        display: block;
+        width: 100%;
+        padding: 0.375rem 0.75rem;
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.5;
+        color: #495057;
+        background-color: #fff;
+        background-clip: padding-box;
+        border: 1px solid #ced4da;
+        border-radius: 0.25rem;
+    }
+</style>
+<main>
+    <section class="" style="background: rgb(245, 248, 250); padding: 4.375rem 0px 3.125rem;">
+        <div class="container">
+            <div class="row">
+                <div class="contact-details-section mb-4 col-lg-6 col-md-4">
+                    <h1 class="title mb-4" style="font-weight: 600;">Contact Us</h1>
+                    <div class="detail">
+                        <h5>Phone / Whatsapp</h5>
+                        <p class="mb-0">+92 333 5189005</p>
+                        <p>+92 335 5517720</p>
+                    </div>
+                    <div class="detail">
+                        <h5>Email</h5>
+                        <p>info@lunch.pk</p>
+                    </div>
+                    <div class="detail">
+                        <h5>Locations</h5>
+                        <p>Available in Lahore, Karachi, <br> Islamabad and Rawalpindi</p>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-8">
+                    <div class="card">
+                        <div class="contact-form-card card-body" style="padding: 40px 60px;">
+                            <h4 class="contact-form-title"
+                                style="font-size: 18px; margin-bottom: 24px; font-weight: 400; line-height: 1.5;">Leave
+                                us a message and someone will <br> get back to you shortly.</h4>
+                            <form action="#" method="post">
+                                {% csrf_token %}
+                                {{ form }}
+                                <button type="submit" class="cta-btn mt-3 cta-btn-primary">Send Message</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="" style="padding: 4.375rem 0px 3.125rem;">
+        <div class="container">
+            <h2 class="font-weight-bold mb-5">Got Questions? We Have Got Answers</h2>
+            <div class="faq-items">
+                <div class="faq-item mb-5">
+                    <h5>Which Cities Are You Available?</h5>
+                    <p style="width: 85%;">We are available in 4 cities and expanding. Lahore, Karachi, Islamabad and
+                        Rawalpindi. We will be available in more cities soon.</p>
+                </div>
+                <div class="faq-item mb-5">
+                    <h5>Are You Available In My Area or Street?</h5>
+                    <p style="width: 85%;">You can simply send us your location on WhatsApp at +92 333 5189005 and we'll
+                        share details and menus for your area</p>
+                </div>
+                <div class="faq-item mb-5">
+                    <h5>What Makes Lunch.pk Different From Other Food Portals?</h5>
+                    <p style="width: 85%;">Almost 98% of the food apps and portals connect you with the restaurants and
+                        hotels near you. On the other hand, Lunch.pk connects you with our verified foodie families
+                        living near you. We accept only homemade food and kitchens backed by expert women chef well
+                        known for their quality food to give you a real taste of homemade food and healthy meals at your
+                        doorstep. Moreover, we have quality assurance processes and regular checks to make sure that you
+                        get clean, hygienic and healthy food via home kitchens. We do not accept poor kitchen
+                        environments, bad taste or any hotels or restaurant food.</p>
+                </div>
+                <div class="faq-item mb-5">
+                    <h5>What Is Minimum Order For Daily Deals?</h5>
+                    <p style="width: 85%;">We need order of minimum 5 persons for daily deals. However, if you are a
+                        single subscriber, you can check out our monthly or weekly packages here.</p>
+                </div>
+                <div class="faq-item mb-5">
+                    <h5>What If I Want Food For 6 or 7 Days A Week?</h5>
+                    <p style="width: 85%;">If you want food for 6 days or 7 days a week, all you need is to pay extra
+                        amount for those additional days and let us know while filling out the form.</p>
+                </div>
+                <div class="faq-item mb-5">
+                    <h5>How Much Food Is Served In A Meal Plan?</h5>
+                    <p style="width: 85%;">We offer 1 serving in our weekly monthly meal plan. the food is more than
+                        enough for 1 person but we do not recommend 2 persons to use single meal plan. Each meal
+                        includes 1 dish, 2 chapati, salad or raita. Our 5 serving deals are more than enough for 5
+                        persons with drink, salad, raita and roti.</p>
+                </div>
+                <div class="faq-item mb-5">
+                    <h5>What Payments Methods Do You Accept?</h5>
+                    <p style="width: 85%;">All of our payments are advance. You can pay us on your first order via Bank
+                        Transfer or Cash on Delivery</p>
+                </div>
+                <div class="faq-item mb-5">
+                    <h5>What If I Am Not Available?</h5>
+                    <p style="width: 85%;">You will receive 5 meals a week. If you are not available at your address for
+                        any reasons, just inform us 1 day ahead on our phone +92 333 5189005 Your days will be adjusted
+                        when you are back and available.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+{% endblock content %}

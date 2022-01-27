@@ -1,0 +1,98 @@
+
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+<section style="padding:7rem 0">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="position-sticky" style="top:100px">
+                    <div
+                        style="display:inline-block;max-width:100%;overflow:hidden;position:relative;box-sizing:border-box;margin:0">
+                        <div style="box-sizing:border-box;display:block;max-width:100%">
+                       
+                            <img sizes="100vw" src='{{ MEDIA_URL }}{{ Deals.deal_img.url }}' alt="img" style="max-width: 100%; display: block; margin: 0; border: none; padding: 0">
+                           
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="position-sticky" style="top:100px">
+                    <h1 class="font-weight-bold">{{ Deals }}</h1>
+                    <div class="d-flex my-4">
+                        <ul class="nav nav-tabs" id="myTab" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <button class="active cta-btn cta-btn-outline-primary mr-3" id="home-tab"
+                                    data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab"
+                                    aria-controls="home" aria-selected="true">3 Servings</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="cta-btn cta-btn-outline-primary" id="profile-tab" data-bs-toggle="tab"
+                                    data-bs-target="#profile" type="button" role="tab" aria-controls="profile"
+                                    aria-selected="false">5 Servings</button>
+                            </li>
+
+                        </ul>
+                    </div>
+                    <h4 class="mb-3">
+                    <div class="tab-content" id="myTabContent">
+                        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">PKR {{ Deals.price3 }}</div>
+                        <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">PKR {{ Deals.price }}</div>
+                    </div>
+                    </h4>
+                    <p class="mb-2">Salad, Raita, 6 Roti for 3 serv, 12 for 5, and Drink included</p>
+                    <p class="font-weight-bold mb-2">Its not just TASTY. Its HEALTHY too!</p>
+                    <p class="mb-1" style="font-size:1rem">Ready to dispatch in 120 mins
+                    </p>
+                    <p style="font-size:1rem">Free Delivery</p>
+                    <form action="place-an-order/">
+                        <input type="hidden" name="item_id" value="{{ Deals.id }}" id="item_id">
+                    </form>
+                    <a class="cta-btn cta-btn-primary" href="/place-an-order/">Order Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="" style="background: rgb(245, 248, 250); padding: 4.375rem 0px 3.125rem;">
+    <div class="container">
+        <h1 class="h2 font-weight-bold text-center mb-5">You may also like</h1>
+        <div class="justify-content-center row">
+            {% for fooddeal in myDeals|slice:":8" %}
+                <div class="col-lg-4 col-md-5">
+                    <a href="{{ fooddeal.pk }}" class="menu-item-card mb-5 w-100 rounded">
+                        <div class="image"
+                            style="height: 250px; border-top-left-radius: 0.25rem; border-top-right-radius: 0.25rem; overflow: hidden;">
+                            <div
+                                style="display: block; overflow: hidden; position: relative; box-sizing: border-box; margin: 0px;">
+                                <div style="display: block; box-sizing: border-box; padding-top: 75%;"></div>
+                                <img sizes="100vw" src='{{ MEDIA_URL }}{{ fooddeal.deal_img.url }}' alt="img"
+                                    style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;">
+
+                            </div>
+                        </div>
+                        <div class="info">
+                            <h3 class="title">{{ fooddeal }}</h3>
+                            <p class="desc ">{{ fooddeal.details }}</p>
+                            <h6 class="delivery-time">Ready to dispatch in 
+                                <span class="text-color-primary">120 mins</span>
+                            </h6>
+                                <button type="button" class="deals-btn cta-btn-primary"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" style="width: 22px; height: 22px;">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7">
+                                    </path>
+                                </svg>
+                            </button>
+                        </div>
+                    </a>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% include "base2.html" %}
+
+{% endblock content %}
