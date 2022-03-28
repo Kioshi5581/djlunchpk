@@ -16,7 +16,7 @@ router.register(r'users', UserAPI, basename="users"),
 # router.register(r'signup', SignupView, basename="signup"),
 
 urlpatterns = [
-    path('', index, name="home"),
+    path('', pkindex, name="home"),
     path('food-deals/', deals, name="food-deals"),
 
     # deals api

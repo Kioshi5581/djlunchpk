@@ -68,8 +68,8 @@ class UserAPI(viewsets.ModelViewSet):
     paginnation_class = perpage_pagination
     authentication_class = (TokenAuthentication,)
 
-def index(request):
-    return render(request, 'index.html')
+def pkindex.html(request):
+    return render(request, 'pkindex.html.html')
 
 
 def deals(request):
