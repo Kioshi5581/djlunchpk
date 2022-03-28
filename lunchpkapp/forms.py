@@ -14,11 +14,11 @@ class FoodlancerRegistration(forms.ModelForm):
         model = foodlancer
         fields = ["Your_Name", "Kitchen_Name", "Email_Address", "Street_Address", "City", "phone"]
 
-class Order_Now(forms.ModelForm):
-    phone = forms.CharField(widget=PhoneNumberPrefixWidget(initial="PK"))
-    class Meta:
-        model = Customers
-        fields = ["Your_Name", "Email_Address", "phone", "Profession", "Packages", "No_of_Persons", "Address", "Time", "City", "Message"]
+# class Order_Now(forms.ModelForm):
+#     phone = forms.CharField(widget=PhoneNumberPrefixWidget(initial="PK"))
+#     class Meta:
+#         model = Customers
+#         fields = ["Your_Name", "Email_Address", "phone", "Profession", "Packages", "No_of_Persons", "Address", "Time", "City", "Message"]
 
 class Contact_form(forms.ModelForm):
     phone = forms.CharField(widget=PhoneNumberPrefixWidget(initial="PK"))

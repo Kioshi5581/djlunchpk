@@ -42,7 +42,7 @@ INSTALLED_APPS = [
     # LOCAL APPS
     'lunchpkapp.apps.LunchpkappConfig',
 
-    # THIRD PARTY APP
+    # THIRD PARTY APPs
     'phonenumber_field',
     'phone_field',
     'django_filters',
@@ -169,5 +169,10 @@ REST_FRAMEWORK = {
 
 }
 
-SOCIAL_AUTH_FACEBOOK_KEY = '455226152761627'  # App ID
-SOCIAL_AUTH_FACEBOOK_SECRET = '2be78888d4561984e0de04c4b5109c74'  # App Secret
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_USE_TLS = True
+EMAIL_PORT = 587
+EMAIL_HOST_USER = "Kioshi5581@gmail.com"
+EMAIL_HOST_PASSWORD = "Lockit48*@#"

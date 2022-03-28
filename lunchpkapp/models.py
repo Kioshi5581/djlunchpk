@@ -8,6 +8,7 @@ from django.urls import reverse
 from rest_framework.authtoken.models import Token
 from django_rest_passwordreset.signals import reset_password_token_created
 from django.core.mail import send_mail  
+from uuid import uuid4
 
 # Create your models here.
 
@@ -131,10 +132,61 @@ class Customers(models.Model):
     Address = models.CharField(max_length=220)
     City = models.CharField(choices=CITIES, max_length=10)
     Time = models.CharField(choices=TIME, max_length=10)
+    Date = models.DateTimeField()
     Message = models.TextField()
     
     def __str__(self):
         return f'{self.Your_Name}'
+
+
+
+Recurrings = (
+    ("No", "No"),
+    ("1 Month", "Every 1 Month"),
+    ("2 Month", "Every 2 Month"),
+    ("3 Month", "Every 3 Month"),
+    ("4 Month", "Every 4 Month"),
+    ("5 Month", "Every 5 Month"),
+    ("6 Month", "Every 6 Month"),
+    ("7 Month", "Every 7 Month"),
+    ("9 Month", "Every 9 Month"),
+    ("10 Month", "Every 10 Month"),
+    ("11 Month", "Every 11 Month"),
+    ("12 Month", "Every 12 Month")
+)
+
+# @login_
+def inv_num():
+    number = 'INV-'+str(uuid4()).split('-')[1]
+    return number
+
+
+class Invoice(models.Model):
+    Customer = models.ForeignKey(Customers, on_delete=models.CASCADE)
+    Invoice_Number = models.CharField(default=inv_num, max_length=10)
+    Recurring = models.CharField(choices=Recurrings, max_length=12)
+    Invoice_date = models.DateField()
+    Due_date = models.DateField()
+    Packages = models.CharField(choices=PAKAGES, max_length=100)
+    Package_name = models.CharField(max_length=50)
+    Package_description = models.TextField()
+    Package_Quantity = models.IntegerField()
+    Package_Price = models.IntegerField()
+
+    def __str__(self):
+        return f'{self.Invoice_Number}'
+
+        
+    def save(self):
+        send_mail(
+            'dfddf',
+            'Here is the message.',
+            'its@example.com',
+            ['kioshi5581@gmail.com'],
+            fail_silently=False,
+        )
+        return super(Invoice, self).save()
+
 
 class Contact(models.Model):
     Your_Name = models.CharField(max_length=250)
